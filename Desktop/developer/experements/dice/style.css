@@ -1,18 +1,41 @@
-.dice {
+* {
+  box-sizing: border-box;
+}
+.container {
+  position: relative;
+  margin: 50px auto;
+  width: 160px;
+  height: 160px;
+  perspective: 500px;
+}
+.cube {
+  width: inherit;
+  height: inherit;
+  transform-style: preserve-3d;
+}
+.side {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border: 2px solid #000;
+  font: normal 30px Arial;
+  text-align: center;
+  line-height: 150px;
+  backface-visibility: hidden;
+}
+/* .dice {
   list-style: none;
   padding: 20px;
-  width: 200px;
-  height: 200px;
+  width: inherit;
+  height: inherit;
   border: solid 5px #000;
-  box-sizing: border-box;
-  /*  */
+
+
   display: inline-flex;
   vertical-align: top;
   margin: 5px;
 }
-/* .dice__point {
-  outline: solid 2px;
-} */
+
 .dice__point::before {
   content: "";
   display: inline-block;
@@ -21,7 +44,7 @@
   background-color: rgb(255, 0, 0);
   border-radius: 50%;
 }
-/* first dice */
+
 .dice-1 {
   justify-content: center;
   align-items: center;
@@ -65,4 +88,28 @@
   flex-flow: wrap column;
   justify-content: space-between;
   align-content: space-between;
+} */
+
+/*  */
+.back {
+  transform: translateZ(80px);
+}
+.front {
+  transform: rotateY(180deg) translateZ(80px);
+}
+.right {
+  transform: rotateY(90deg) translateZ(80px);
+}
+.left {
+  transform: rotateY(-90deg) translateZ(80px);
+}
+.top {
+  transform: rotateX(90deg) translateZ(80px);
+}
+.bottom {
+  transform: rotateX(-90deg) translateZ(80px);
+}
+.btn {
+  width: 100px;
+  height: 50px;
 }
