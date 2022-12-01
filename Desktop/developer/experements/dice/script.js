@@ -1,17 +1,3 @@
-// (function () {
-//   let rotateY = 0,
-//     rotateX = 0;
-
-//   document.onkeydown = function (e) {
-//     if (e.keyCode === 37) rotateY -= 4;
-//     else if (e.keyCode === 38) rotateX += 4;
-//     else if (e.keyCode === 39) rotateY += 4;
-//     else if (e.keyCode === 40) rotateX -= 4;
-
-//     document.querySelector(".cube").style.transform =
-//       "rotateY(" + rotateY + "deg)" + "rotateX(" + rotateX + "deg)";
-//   };
-// })();
 const btn = document.querySelector(".btn");
 const cube = document.querySelector(".cube");
 const front = document.querySelector(".front");
@@ -35,11 +21,13 @@ btn.addEventListener("click", function () {
   let randomNumber = getRandom();
   console.log("randomNumber", randomNumber);
   let randomSide = sides[`side${randomNumber}`];
-
+  //////////////////////////////
+  console.log(cube.style.transform);
   cube.animate(
     [
       // keyframes
       { transform: `rotateY(${startSide[0]}deg) rotateX(${startSide[1]}deg)` },
+
       {
         transform: `rotateY(${randomSide[0] + 360}deg) rotateX(${
           randomSide[1] + 360
@@ -48,13 +36,9 @@ btn.addEventListener("click", function () {
     ],
     {
       // timing options
-      duration: 1000,
-      // iterations: Infinity,
+      duration: 1500,
     }
   );
-  // startSide = randomSide;
-  front.textContent = randomNumber;
-  console.log(front.textContent);
-});
 
-console.log(startSide);
+  cube.style.transform = `rotateY(${randomSide[0]}deg) rotateX(${randomSide[1]}deg)`;
+});

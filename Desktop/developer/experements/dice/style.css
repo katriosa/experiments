@@ -14,6 +14,7 @@
   transform-style: preserve-3d;
 }
 .side {
+  list-style: none;
   position: absolute;
   width: inherit;
   height: inherit;
@@ -23,78 +24,15 @@
   line-height: 150px;
   backface-visibility: hidden;
 }
-/* .dice {
-  list-style: none;
-  padding: 20px;
-  width: inherit;
-  height: inherit;
-  border: solid 5px #000;
-
-
-  display: inline-flex;
-  vertical-align: top;
-  margin: 5px;
+.dice-img {
+  width: 155px;
+  height: 155px;
 }
-
-.dice__point::before {
-  content: "";
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  background-color: rgb(255, 0, 0);
-  border-radius: 50%;
-}
-
-.dice-1 {
-  justify-content: center;
-  align-items: center;
-}
-.dice-2 {
-  justify-content: space-between;
-}
-.dice-2 .dice__point:nth-child(1) {
-  align-self: flex-end;
-}
-.dice-3 {
-  justify-content: space-between;
-}
-.dice-3 .dice__point:nth-child(1) {
-  align-self: flex-end;
-}
-.dice-3 .dice__point:nth-child(2) {
-  align-self: center;
-}
-.dice-4 {
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: space-between;
-}
-.dice-4 .dice__point {
-  width: 50%;
-}
-.dice-4 .dice__point:nth-child(even) {
-  text-align: right;
-}
-.dice-5 {
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: space-between;
-}
-.dice-5 .dice__point:nth-child(3) {
-  width: 100%;
-  text-align: center;
-}
-.dice-6 {
-  flex-flow: wrap column;
-  justify-content: space-between;
-  align-content: space-between;
-} */
-
 /*  */
-.back {
+.front {
   transform: translateZ(80px);
 }
-.front {
+.back {
   transform: rotateY(180deg) translateZ(80px);
 }
 .right {
